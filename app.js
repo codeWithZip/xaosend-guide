@@ -23,9 +23,7 @@
     document.body.style.overflow = '';
     if (previousFocus) previousFocus.focus();
   }
-  $$('.image-open').forEach(button => button.addEventListener('click', (event) => {
-    if (!lightbox || !lightboxImage || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-    event.preventDefault();
+  $$('.image-open').forEach(button => button.addEventListener('click', () => {
     previousFocus = button;
     lightboxImage.src = button.dataset.img;
     lightboxImage.alt = button.querySelector('img').alt;
