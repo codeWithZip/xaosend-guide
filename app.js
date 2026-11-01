@@ -85,4 +85,36 @@
     }, { rootMargin: '-12% 0px -72% 0px', threshold: 0 });
     sections.forEach(s => io.observe(s));
   }
+  // Разовое приглашение в Telegram: только один показ на браузер.
+  const contactModal = document.getElementById('contact-modal');
+  const contactFlag = 'xaosend_contact_invite_seen_v1';
+  let hasSeenContact = false;
+  try { hasSeenContact = localStorage.getItem(contactFlag) === 'yes'; } catch (_) {}
+  const markContactSeen = () => { try { localStorage.setItem(contactFlag, 'yes'); } catch (_) {} };
+  let contactPreviousFocus = null;
+  function closeContactModal() {
+    if (contactModal.hidden) return;
+    contactModal.hidden = true;
+    contactModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (contactPreviousFocus) contactPreviousFocus.focus();
+  }
+  if (contactModal) {
+    contactModal.querySelectorAll('[data-close-contact]').forEach(el => el.addEventListener('click', closeContactModal));
+    contactModal.querySelector('.contact-modal-action').addEventListener('click', closeContactModal);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !contactModal.hidden) closeContactModal(); });
+    if (!hasSeenContact) {
+      window.setTimeout(() => {
+        // Не перекрываем увеличенный скриншот.
+        if (!lightbox.hidden) return;
+        contactPreviousFocus = document.activeElement;
+        markContactSeen();
+        contactModal.hidden = false;
+        contactModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        document.getElementById('contact-modal-close').focus();
+      }, 15000);
+    }
+  }
+
 })();

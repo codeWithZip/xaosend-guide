@@ -24,3 +24,24 @@ html{background:#090d18}body{background:#090d18;color:#f5f6fc;font-size:16px}a{c
 .finish-action:focus-visible{outline:3px solid #fff;outline-offset:4px}
 @media(max-width:760px){.finish-telegram{padding:22px!important;align-items:stretch;flex-direction:column;gap:19px}.finish-telegram .finish-copy{width:100%}.finish-action{width:100%;margin:0!important;min-height:54px}}
 @media(max-width:360px){.finish-telegram{padding:18px!important}}
+
+
+/* v1.5.1 — рамки скриншотов, тёмная тема с коралловым акцентом */
+.image-block{border:2px solid #ff806d!important; padding:5px!important; background:linear-gradient(135deg,#362b37,#172236)!important; box-shadow:0 0 0 1px #ff806d44,0 16px 34px #0005!important; border-radius:16px!important}
+.image-block .image-open{border-radius:10px 10px 6px 6px;overflow:hidden;}
+.image-block .image-caption{border-radius:0 0 9px 9px;}
+.image-block .image-open:focus-visible{outline:3px solid #fff;outline-offset:-4px}
+.contact-modal[hidden]{display:none!important}
+.contact-modal{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:16px}
+.contact-modal-backdrop{position:absolute;inset:0;background:#060913d9;backdrop-filter:blur(6px)}
+.contact-modal-panel{position:relative;width:min(100%,420px);box-sizing:border-box;background:#171e2d;border:1px solid #ff806d80;border-radius:20px;padding:33px 26px 25px;color:#f9f9ff;text-align:center;box-shadow:0 20px 80px #000a}
+.contact-modal-kicker{color:#ff9a86;font-weight:800;letter-spacing:.13em;font-size:11px}
+.contact-modal-panel h2{font-size:clamp(23px,5.5vw,31px)!important;line-height:1.24;margin:14px 0;color:#fff!important}
+.contact-modal-panel p{font-size:14px;color:#b5c0d3;line-height:1.65;margin:0 0 24px}
+.contact-modal-close{position:absolute;right:12px;top:9px;background:transparent;border:0;color:#b5c0d3;font-size:30px;cursor:pointer;width:42px;height:42px}
+.contact-modal-action{display:flex;align-items:center;justify-content:center;gap:10px;min-height:50px;box-sizing:border-box;background:#ff806d;color:#10131c!important;border-radius:10px;font-size:15px;font-weight:800;padding:12px 16px;text-decoration:none!important}
+.contact-modal-action:hover{background:#ff9b8c}
+.contact-modal-later{margin-top:13px;border:0;background:transparent;color:#bfcbe0;min-height:42px;padding:10px 20px;cursor:pointer;font-size:13px}
+.contact-modal-panel :focus-visible{outline:2px solid #fff;outline-offset:3px}
+@media(max-width:500px){.contact-modal-panel{padding:32px 20px 18px;border-radius:16px}.image-block{padding:3px!important}}
+@media(prefers-reduced-motion:no-preference){.contact-modal-panel{animation:contact-appear .22s ease-out}@keyframes contact-appear{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}}
