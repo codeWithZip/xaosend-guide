@@ -9,9 +9,11 @@
 <meta content="xaosEnd" name="author"/>
 <meta content="Пошаговая инструкция по работе с заказами в админ-панели: как найти заказ, проверить поступление денег и подтвердить оплату." name="description"/>
 <title>Инструкция по заказам — xaosEnd</title>
+<link rel="icon" type="image/x-icon" href="./favicon.ico?v=172"/>
+<link rel="icon" type="image/png" sizes="256x256" href="./favicon.png?v=172"/>
 <link href="styles.css?v=163" rel="stylesheet"/>
 <link href="theme-reference.css?v=163" rel="stylesheet"/>
-<script defer="" src="app.js?v=163"></script>
+<script defer="" src="app.js?v=169"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Перейти к содержимому</a>
@@ -43,18 +45,18 @@
 </header>
 <main id="main">
 <section aria-labelledby="hero-title" class="hero hero-illustrated">
-<img class="hero-banner-image" src="assets/hero-payments.png" alt="" aria-hidden="true" fetchpriority="high"/>
+<img alt="" aria-hidden="true" class="hero-banner-image" fetchpriority="high" src="assets/hero-payments.png"/>
 <div class="hero-inner">
 <div class="hero-copy">
 <div class="eyebrow"><span class="eyebrow-dot"></span> РАБОТА С ЗАКАЗАМИ</div>
 <h1 id="hero-title">Пошаговое <em>руководство</em></h1>
-<p>От нового уведомления до подтверждения оплаты. Всё объяснено простыми словами и показано на скриншотах.</p>
-<div class="hero-actions"><a class="btn btn-primary" href="#overview">Начать изучение <span aria-hidden="true">↗</span></a><a class="btn btn-ghost" href="#problems">Если возникла проблема <span aria-hidden="true">→</span></a></div>
-<div class="hero-mini-points"><span>Пошагово</span><span>На понятных примерах</span><span>Скриншоты внутри</span></div>
+<p>Добро пожаловать! Здесь мы изучим основы платформы MPL и получим первый доход.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="#overview">Начать изучение <span aria-hidden="true">↗</span></a><a aria-label="Написать xaosEnd в Telegram" class="btn btn-telegram" href="https://t.me/xaosEnd" rel="noopener noreferrer" target="_blank">Написать <span aria-hidden="true">↗</span></a></div>
+
 </div>
 </div>
-<div class="hero-bar"><span><i class="round-dot green"></i> Для новых сотрудников</span><span><i class="round-dot purple"></i> 5 скриншотов с примерами</span><span><i class="round-dot orange"></i> Правила и контакты</span></div>
-</section><nav aria-label="Пять частей инструкции" class="chapter-grid"><a class="chapter-link" href="#overview"><span>01</span><strong>Перед началом</strong><span aria-hidden="true">↗</span></a><a class="chapter-link" href="#new-order"><span>02</span><strong>Работа с заказом</strong><span aria-hidden="true">↗</span></a><a class="chapter-link" href="#problems"><span>03</span><strong>Нестандартные ситуации</strong><span aria-hidden="true">↗</span></a><a class="chapter-link" href="#cards"><span>04</span><strong>Завершение смены</strong><span aria-hidden="true">↗</span></a><a class="chapter-link" href="#contacts"><span>05</span><strong>Помощь и контакты</strong><span aria-hidden="true">↗</span></a></nav>
+
+</section>
 <div class="content">
 <div class="notice notice-critical" role="note"><div aria-hidden="true" class="notice-icon">!</div><div><strong>Главное правило: нет поступления денег — нет подтверждения заказа.</strong><p>Проверяйте фактическое зачисление в банковском приложении. Уведомление, чек или слова клиента сами по себе не гарантируют оплату.</p></div></div>
 <div class="chapter-heading" id="chapter-01"><span class="chapter-number">01</span><div><h2>Перед началом</h2><p>Ориентируемся в панели и знакомимся с правилами.</p></div></div><section class="section" data-search="как это работает порядок действий уведомление банк сумма сверка внести оплачен" id="overview">
@@ -121,10 +123,10 @@
 <h2>Когда нельзя просто нажать «Внести»</h2>
 <p class="lead">При любой неопределённости сначала уточните информацию. Ошибочное подтверждение может привести к финансовым потерям.</p>
 <div class="scenario-grid">
-<article class="scenario"><div class="scenario-top"><span class="scenario-symbol">≠</span><span class="scenario-tag">СВЕРКА</span></div><h3>Сумма отличается</h3><p>Пришло больше или меньше, даже на 1 ₽? Не подбирайте заказ наугад. Напишите ответственному лицу.</p></article>
-<article class="scenario"><div class="scenario-top"><span class="scenario-symbol">Ⅱ</span><span class="scenario-tag">ВНИМАНИЕ</span></div><h3>Два заказа на одну сумму</h3><p>Не ориентируйтесь только на сумму. Если не удаётся однозначно определить нужный заказ — уточните у администратора.</p></article>
-<article class="scenario"><div class="scenario-top"><span class="scenario-symbol">▧</span><span class="scenario-tag">ЧЕК КЛИЕНТА</span></div><h3>Заказ помечен проблемным</h3><p>Бот сообщил о проблемном заказе: клиент прикрепил чек. Проверьте фактическое поступление в банке. Подтвердите только после сверки.</p></article>
-<article class="scenario"><div class="scenario-top"><span class="scenario-symbol">×</span><span class="scenario-tag">СТОП</span></div><h3>Чек есть, а денег нет</h3><p>Чек не заменяет банковское подтверждение. Не вносите заказ, сообщите о проблеме ответственному лицу.</p></article>
+<article class="scenario"><div class="scenario-top"><span aria-hidden="true" class="scenario-symbol"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M5 8h14M5 16h14"></path><path d="m14 5 5 3-5 3M10 13l-5 3 5 3"></path></svg></span><span class="scenario-tag">СВЕРКА</span></div><h3>Сумма отличается</h3><p>Пришло больше или меньше, даже на 1 ₽? Не подбирайте заказ наугад. Напишите ответственному лицу.</p></article>
+<article class="scenario"><div class="scenario-top"><span aria-hidden="true" class="scenario-symbol"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="14" rx="2" width="7" x="3" y="5"></rect><rect height="14" rx="2" width="7" x="14" y="5"></rect><path d="M7 9h0M18 9h0"></path></svg></span><span class="scenario-tag">ВНИМАНИЕ</span></div><h3>Два заказа на одну сумму</h3><p>Не ориентируйтесь только на сумму. Если не удаётся однозначно определить нужный заказ — уточните у администратора.</p></article>
+<article class="scenario"><div class="scenario-top"><span aria-hidden="true" class="scenario-symbol"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M7 3h8l4 4v14H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"></path><path d="M14 3v5h5M9 13h6M9 17h5"></path></svg></span><span class="scenario-tag">ЧЕК КЛИЕНТА</span></div><h3>Заказ помечен проблемным</h3><p>Бот сообщил о проблемном заказе: клиент прикрепил чек. Проверьте фактическое поступление в банке. Подтвердите только после сверки.</p></article>
+<article class="scenario"><div class="scenario-top"><span aria-hidden="true" class="scenario-symbol"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9 9l6 6M15 9l-6 6"></path></svg></span><span class="scenario-tag">СТОП</span></div><h3>Чек есть, а денег нет</h3><p>Чек не заменяет банковское подтверждение. Не вносите заказ, сообщите о проблеме ответственному лицу.</p></article>
 </div>
 <div class="contact-strip"><span class="contact-strip-icon">?</span><div><strong>Нужна помощь по проблемному платежу?</strong><p>Ответственный аккаунт: <b>@MONOPOLY_PROBLEM_PAY</b></p></div><a class="text-cta" href="https://t.me/MONOPOLY_PROBLEM_PAY" rel="noopener noreferrer" target="_blank">Написать в Telegram ↗</a></div>
 </section>
